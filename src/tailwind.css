@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --font-urbanist: "Urbanist", sans-serif;
+  --color-primary: #1a2c56;
+  --color-secondary: #f5f5f5;
+}
+
+@layer base {
+  body,
+  html {
+    @apply scroll-smooth font-urbanist overflow-x-hidden bg-secondary;
+  }
+
+  h1 {
+    @apply text-[23px] font-bold;
+  }
+
+  h2 {
+    @apply text-[17px] font-semibold;
+  }
+
+  h3 {
+    @apply text-[17px] font-bold;
+  }
+
+  a {
+    @apply text-[17px] font-bold;
+  }
+}
+
+@layer components {
+  .bi-three-dots {
+    @apply fixed top-[45px] bg-gray-400 text-secondary py-2 px-3 rounded-full cursor-pointer hover:bg-primary transition-all duration-200;
+  }
+
+  .container-custom {
+    @apply flex flex-col max-w-[600px] mx-auto px-5 text-center text-primary;
+  }
+
+  .container-custom:first-child {
+    @apply pt-[70px];
+  }
+
+  .heading img {
+    @apply rounded-full w-[100px] mx-auto mb-[15px];
+  }
+
+  .item {
+    @apply flex flex-col gap-4 mt-10;
+  }
+
+  .item h3 {
+    @apply -mb-[5px];
+  }
+
+  .item a {
+    @apply relative bg-primary text-secondary py-[18px] rounded-lg cursor-pointer border-[2px] border-primary hover:bg-secondary hover:text-primary transition-all duration-200;
+  }
+
+  .item .bi-share {
+    @apply absolute right-[20px] transition-all duration-300;
+  }
+
+  .link-sosial {
+    @apply flex justify-center gap-[25px] mt-[25px] pb-[70px];
+  }
+
+  .link-sosial a {
+    @apply text-[28px] transition-all duration-100;
+  }
+
+  .link-sosial a:hover {
+    transform: scale(1.1);
+  }
+}
